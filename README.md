@@ -1,10 +1,7 @@
-# Claude Code Complete Guide
-
-> Comprehensive reference based on 15+ official sources and testing
 
 Subscribe to [DevsAura](https://www.youtube.com/@devsauraofficial) for more dev tools deep dives
 
----
+# Claude Code Complete Guide
 
 <details>
 <summary><h2 id="installation" style="display: inline-block; margin: 0;">Installation</h2></summary>
@@ -402,7 +399,5 @@ Debug: /doctor
 ```
 
 </details>
-
----
 
 Subscribe to [DevsAura](https://www.youtube.com/@devsauraofficial) for more dev tools deep dives
