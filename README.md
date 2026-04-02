@@ -6,7 +6,27 @@ Subscribe to [DevsAura](https://www.youtube.com/@devsauraofficial) for more dev 
 
 ---
 
-## Installation
+## Table of Contents
+
+- [Installation](#installation)
+- [Base Commands](#base-commands)
+- [Essential CLI Flags](#essential-cli-flags)
+- [Slash Commands](#slash-commands)
+- [Keyboard Shortcuts](#keyboard-shortcuts)
+- [Permission Modes](#permission-modes)
+- [CLAUDE.md Best Practices](#claudemd-best-practices)
+- [Token Optimization](#token-optimization)
+- [Pricing Reference](#pricing-reference)
+- [Common Workflows](#common-workflows)
+- [Troubleshooting](#troubleshooting)
+- [MCP (Model Context Protocol)](#mcp-model-context-protocol)
+- [Lifecycle Hooks](#lifecycle-hooks)
+- [Quick Reference](#quick-reference)
+
+---
+
+<details>
+<summary><h2 id="installation" style="display: inline-block; margin: 0;">Installation</h2></summary>
 
 ### macOS / Linux / WSL
 ```bash
@@ -39,9 +59,12 @@ winget install Anthropic.ClaudeCode
 - 4GB RAM minimum
 - Active Claude subscription (Pro, Max, Team, Enterprise) or Anthropic Console credits
 
+</details>
+
 ---
 
-## Base Commands
+<details>
+<summary><h2 id="base-commands" style="display: inline-block; margin: 0;">Base Commands</h2></summary>
 
 | Command | Description | Example |
 |---------|-------------|---------|
@@ -53,9 +76,12 @@ winget install Anthropic.ClaudeCode
 | `claude -r "<name>"` | Resume named session | `claude -r "auth-refactor"` |
 | `claude update` | Force update | `claude update` |
 
+</details>
+
 ---
 
-## Essential CLI Flags
+<details>
+<summary><h2 id="essential-cli-flags" style="display: inline-block; margin: 0;">Essential CLI Flags</h2></summary>
 
 ### Permission & Safety
 | Flag | Description |
@@ -94,9 +120,12 @@ winget install Anthropic.ClaudeCode
 | `--debug <categories>` | Filtered debug |
 | `--debug-file <path>` | Log to file |
 
+</details>
+
 ---
 
-## Slash Commands (In Session)
+<details>
+<summary><h2 id="slash-commands" style="display: inline-block; margin: 0;">Slash Commands (In Session)</h2></summary>
 
 ### Context Management
 | Command | Purpose |
@@ -150,9 +179,12 @@ winget install Anthropic.ClaudeCode
 | `/tasks` | Background job manager |
 | `/vim` | Toggle vim keybindings |
 
+</details>
+
 ---
 
-## Keyboard Shortcuts
+<details>
+<summary><h2 id="keyboard-shortcuts" style="display: inline-block; margin: 0;">Keyboard Shortcuts</h2></summary>
 
 ### Global
 | Shortcut | Action |
@@ -186,9 +218,12 @@ winget install Anthropic.ClaudeCode
 | `Ctrl+E` | Show rationale |
 | `Ctrl+B` | Background task |
 
+</details>
+
 ---
 
-## Permission Modes
+<details>
+<summary><h2 id="permission-modes" style="display: inline-block; margin: 0;">Permission Modes</h2></summary>
 
 Cycle with **Shift+Tab**:
 
@@ -199,9 +234,12 @@ Cycle with **Shift+Tab**:
 5. **DontAsk** - Denies everything unless whitelisted
 6. **Bypass** - No prompts, full access (dangerous)
 
+</details>
+
 ---
 
-## CLAUDE.md Best Practices
+<details>
+<summary><h2 id="claudemd-best-practices" style="display: inline-block; margin: 0;">CLAUDE.md Best Practices</h2></summary>
 
 ### Hierarchy (Loads in order)
 1. `/etc/claude-code/CLAUDE.md` (Enterprise)
@@ -244,9 +282,12 @@ Cycle with **Shift+Tab**:
 - API docs: ./docs/api.md
 ```
 
+</details>
+
 ---
 
-## Token Optimization
+<details>
+<summary><h2 id="token-optimization" style="display: inline-block; margin: 0;">Token Optimization</h2></summary>
 
 ### Environment Variables
 ```bash
@@ -279,9 +320,12 @@ Summarize these logs and return key findings.
 ```
 Haiku is $1/MTok vs Opus at $15/MTok.
 
+</details>
+
 ---
 
-## Pricing Reference (April 2026)
+<details>
+<summary><h2 id="pricing-reference" style="display: inline-block; margin: 0;">Pricing Reference (April 2026)</h2></summary>
 
 ### Subscription Tiers
 | Plan | Monthly | Best For |
@@ -301,9 +345,12 @@ Haiku is $1/MTok vs Opus at $15/MTok.
 
 **Pro tip:** Max 5x subscription makes cache reads effectively free. Up to 36x cheaper than API for heavy users.
 
+</details>
+
 ---
 
-## Common Workflows
+<details>
+<summary><h2 id="common-workflows" style="display: inline-block; margin: 0;">Common Workflows</h2></summary>
 
 ### Quick Fixes
 ```bash
@@ -333,9 +380,12 @@ claude --permission-mode plan
 # Shift+Tab back to normal mode
 ```
 
+</details>
+
 ---
 
-## Troubleshooting
+<details>
+<summary><h2 id="troubleshooting" style="display: inline-block; margin: 0;">Troubleshooting</h2></summary>
 
 ### `/doctor` Command
 Run comprehensive diagnostics:
@@ -353,9 +403,12 @@ Run comprehensive diagnostics:
 | Can't search codebase | `claude update` to refresh ripgrep |
 | Agent loops fail | Check git-bash.exe path on Windows |
 
+</details>
+
 ---
 
-## MCP (Model Context Protocol)
+<details>
+<summary><h2 id="mcp-model-context-protocol" style="display: inline-block; margin: 0;">MCP (Model Context Protocol)</h2></summary>
 
 ### Add a Server
 ```bash
@@ -376,9 +429,12 @@ claude mcp add github -e GITHUB_PERSONAL_ACCESS_TOKEN=$PAT -- \
 - **CData Connect** - SQL bridge to 350+ sources
 - **Slack/Notion** - Notifications and docs
 
+</details>
+
 ---
 
-## Lifecycle Hooks
+<details>
+<summary><h2 id="lifecycle-hooks" style="display: inline-block; margin: 0;">Lifecycle Hooks</h2></summary>
 
 Configure in `.claude/settings.json`:
 
@@ -419,18 +475,22 @@ Configure in `.claude/settings.json`:
 }
 ```
 
+</details>
+
 ---
 
-## Quick Reference
+<details>
+<summary><h2 id="quick-reference" style="display: inline-block; margin: 0;">Quick Reference</h2></summary>
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  Claude Code = Junior dev with terminal access              │
-│  Copilot = Autocomplete  |  Cursor = Pair programmer        │
-└─────────────────────────────────────────────────────────────┘
-
 Safety:  Shift+Tab to plan mode  |  Cost:  /compact regularly
 Config:  CLAUDE.md in project    |  Debug: /doctor
 
 Subscribe to [DevsAura](https://www.youtube.com/@devsauraofficial)
 ```
+
+</details>
+
+---
+
+Subscribe to [DevsAura](https://www.youtube.com/@devsauraofficial) for more dev tools deep dives
