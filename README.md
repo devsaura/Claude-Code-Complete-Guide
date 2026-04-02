@@ -6,25 +6,6 @@ Subscribe to [DevsAura](https://www.youtube.com/@devsauraofficial) for more dev 
 
 ---
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Base Commands](#base-commands)
-- [Essential CLI Flags](#essential-cli-flags)
-- [Slash Commands](#slash-commands)
-- [Keyboard Shortcuts](#keyboard-shortcuts)
-- [Permission Modes](#permission-modes)
-- [CLAUDE.md Best Practices](#claudemd-best-practices)
-- [Token Optimization](#token-optimization)
-- [Pricing Reference](#pricing-reference)
-- [Common Workflows](#common-workflows)
-- [Troubleshooting](#troubleshooting)
-- [MCP (Model Context Protocol)](#mcp-model-context-protocol)
-- [Lifecycle Hooks](#lifecycle-hooks)
-- [Quick Reference](#quick-reference)
-
----
-
 <details>
 <summary><h2 id="installation" style="display: inline-block; margin: 0;">Installation</h2></summary>
 
@@ -61,7 +42,6 @@ winget install Anthropic.ClaudeCode
 
 </details>
 
----
 
 <details>
 <summary><h2 id="base-commands" style="display: inline-block; margin: 0;">Base Commands</h2></summary>
@@ -78,7 +58,6 @@ winget install Anthropic.ClaudeCode
 
 </details>
 
----
 
 <details>
 <summary><h2 id="essential-cli-flags" style="display: inline-block; margin: 0;">Essential CLI Flags</h2></summary>
@@ -120,7 +99,6 @@ winget install Anthropic.ClaudeCode
 
 </details>
 
----
 
 <details>
 <summary><h2 id="slash-commands" style="display: inline-block; margin: 0;">Slash Commands (In Session)</h2></summary>
@@ -179,7 +157,6 @@ winget install Anthropic.ClaudeCode
 
 </details>
 
----
 
 <details>
 <summary><h2 id="keyboard-shortcuts" style="display: inline-block; margin: 0;">Keyboard Shortcuts</h2></summary>
@@ -204,7 +181,6 @@ winget install Anthropic.ClaudeCode
 
 </details>
 
----
 
 <details>
 <summary><h2 id="permission-modes" style="display: inline-block; margin: 0;">Permission Modes</h2></summary>
@@ -217,7 +193,6 @@ Cycle with **Shift+Tab**:
 
 </details>
 
----
 
 <details>
 <summary><h2 id="claudemd-best-practices" style="display: inline-block; margin: 0;">CLAUDE.md Best Practices</h2></summary>
@@ -265,7 +240,6 @@ Cycle with **Shift+Tab**:
 
 </details>
 
----
 
 <details>
 <summary><h2 id="token-optimization" style="display: inline-block; margin: 0;">Token Optimization</h2></summary>
@@ -303,8 +277,6 @@ Haiku is $1/MTok vs Opus at $15/MTok.
 
 </details>
 
----
-
 <details>
 <summary><h2 id="pricing-reference" style="display: inline-block; margin: 0;">Pricing Reference (April 2026)</h2></summary>
 
@@ -328,8 +300,6 @@ Haiku is $1/MTok vs Opus at $15/MTok.
 
 </details>
 
----
-
 <details>
 <summary><h2 id="troubleshooting" style="display: inline-block; margin: 0;">Troubleshooting</h2></summary>
 
@@ -350,8 +320,6 @@ Run comprehensive diagnostics:
 | Agent loops fail | Check git-bash.exe path on Windows |
 
 </details>
-
----
 
 <details>
 <summary><h2 id="mcp-model-context-protocol" style="display: inline-block; margin: 0;">MCP (Model Context Protocol)</h2></summary>
@@ -377,7 +345,6 @@ claude mcp add github -e GITHUB_PERSONAL_ACCESS_TOKEN=$PAT -- \
 
 </details>
 
----
 
 <details>
 <summary><h2 id="lifecycle-hooks" style="display: inline-block; margin: 0;">Lifecycle Hooks</h2></summary>
@@ -423,7 +390,6 @@ Configure in `.claude/settings.json`:
 
 </details>
 
----
 
 <details>
 <summary><h2 id="quick-reference" style="display: inline-block; margin: 0;">Quick Reference</h2></summary>
