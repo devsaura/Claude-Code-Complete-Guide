@@ -1,6 +1,6 @@
 # Claude Code Complete Guide
 
-> Comprehensive reference based on 15+ official sources and real-world testing
+> Comprehensive reference based on 15+ official sources and testing
 
 Subscribe to [DevsAura](https://www.youtube.com/@devsauraofficial) for more dev tools deep dives
 
@@ -89,7 +89,6 @@ winget install Anthropic.ClaudeCode
 | `--permission-mode plan` | Read-only mode (safety net) |
 | `--dangerously-skip-permissions` | Bypass all confirmations |
 | `--allow-dangerously-skip-permissions` | Allow mid-session bypass |
-| `--sandbox` | Restrict to git repo only |
 
 ### Cost Control
 | Flag | Description |
@@ -98,7 +97,6 @@ winget install Anthropic.ClaudeCode
 | `--max-turns <n>` | Limit AI iterations |
 | `--effort <low/medium/high/max>` | Control reasoning depth |
 | `--model <name>` | Force specific model |
-| `--fast` | Use Haiku model (cheapest) |
 
 ### Workflow
 | Flag | Description |
@@ -136,12 +134,12 @@ winget install Anthropic.ClaudeCode
 | `/branch [name]` | Fork conversation |
 | `/cost` | Show token usage |
 | `/context` | Visual context heatmap |
-| `/export [file]` | Save conversation |
+| `/export [filename]` | Save conversation |
 
 ### Modes & Tools
 | Command | Purpose |
 |---------|---------|
-| `/plan [desc]` | Enter read-only plan mode |
+| `/plan [description]` | Enter read-only plan mode |
 | `/effort [level]` | Change reasoning depth |
 | `/fast [on/off]` | Toggle Haiku mode |
 | `/model [name]` | Switch model |
@@ -155,7 +153,7 @@ winget install Anthropic.ClaudeCode
 | `/agents` | Sub-agent management |
 | `/skills` | List loaded skills |
 | `/hooks` | View lifecycle hooks |
-| `/plugins` | Plugin management |
+| `/plugin` | Plugin management |
 
 ### System
 | Command | Purpose |
@@ -193,7 +191,6 @@ winget install Anthropic.ClaudeCode
 | `Ctrl+D` | Exit cleanly |
 | `Ctrl+T` | Toggle task list |
 | `Ctrl+O` | Toggle transcript |
-| `Cmd/Ctrl+K` | Command palette |
 
 ### Chat Input
 | Shortcut | Action |
@@ -201,22 +198,9 @@ winget install Anthropic.ClaudeCode
 | `Enter` | Submit prompt |
 | `Escape` | Cancel input (double-tap = rewind) |
 | `Shift+Tab` | **Cycle permission modes** |
-| `Cmd/Ctrl+P` | Model picker |
-| `Meta+O` | Toggle Fast Mode |
-| `Cmd/Ctrl+T` | Toggle thinking tokens |
 | `Ctrl+G` | Open in $EDITOR |
-| `Ctrl+S` | Stash prompt |
 | `Ctrl+V` | Paste image |
-| `Space (hold)` | Voice input |
 | `Ctrl+R` | Search history |
-| `Up/Down` | History navigation |
-
-### Permissions Dialog
-| Shortcut | Action |
-|----------|--------|
-| `Y/N` | Accept / Deny |
-| `Ctrl+E` | Show rationale |
-| `Ctrl+B` | Background task |
 
 </details>
 
@@ -230,9 +214,6 @@ Cycle with **Shift+Tab**:
 1. **Normal** - Prompts for edits and bash
 2. **Accept Edits** - Auto-approves file changes, asks for bash
 3. **Plan Mode** - Read-only, no changes allowed
-4. **Auto** - ML classifier auto-approves safe actions
-5. **DontAsk** - Denies everything unless whitelisted
-6. **Bypass** - No prompts, full access (dangerous)
 
 </details>
 
@@ -350,41 +331,6 @@ Haiku is $1/MTok vs Opus at $15/MTok.
 ---
 
 <details>
-<summary><h2 id="common-workflows" style="display: inline-block; margin: 0;">Common Workflows</h2></summary>
-
-### Quick Fixes
-```bash
-# Fix build error
-claude "fix the build error in src/app.tsx"
-
-# Code review
-claude --from-pr 42
-
-# Analyze logs
-cat /var/log/syslog | grep error | claude -p "identify root cause"
-
-# Isolated refactor
-claude -w auth-upgrade "refactor auth to OAuth2"
-
-# Test-driven
-claude "run npm test and fix failures"
-```
-
-### Safe Exploration
-```bash
-# Plan mode first
-claude --permission-mode plan
-# Or in session: Shift+Tab until "plan mode on"
-
-# Review plan, then execute
-# Shift+Tab back to normal mode
-```
-
-</details>
-
----
-
-<details>
 <summary><h2 id="troubleshooting" style="display: inline-block; margin: 0;">Troubleshooting</h2></summary>
 
 ### `/doctor` Command
@@ -483,10 +429,10 @@ Configure in `.claude/settings.json`:
 <summary><h2 id="quick-reference" style="display: inline-block; margin: 0;">Quick Reference</h2></summary>
 
 ```
-Safety:  Shift+Tab to plan mode  |  Cost:  /compact regularly
-Config:  CLAUDE.md in project    |  Debug: /doctor
-
-Subscribe to [DevsAura](https://www.youtube.com/@devsauraofficial)
+Safety:  Shift+Tab to plan mode
+Cost:  /compact regularly
+Config:  CLAUDE.md in project
+Debug: /doctor
 ```
 
 </details>
